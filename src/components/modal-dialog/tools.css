@@ -1,0 +1,127 @@
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 46px);
+    grid-template-rows: repeat(8, 46px);
+    grid-gap: 1px;
+}
+
+.buttons > div {
+    background-color: #2d2d2d;
+    background-image: url(../../screens/canvas/images/icons.png);
+    background-size: 430px;
+}
+
+.buttons>div:active {
+    border: yellow 2px solid;
+}
+
+.button-pen {
+    background-position: 610px 610px;
+}
+
+.button-mirrorpen {
+    background-position: -5px 170px;
+}
+
+.button-bucket {
+    background-position: 542px 610px;
+}
+
+.button-picker {
+    background-position: 483px 731px;
+}
+
+.button-paintall {
+    background-position: 542px 170px;
+}
+
+.button-eraser {
+    background-position: 790px 790px;
+}
+
+.button-stroke {
+    background-position: 1220px 550px;
+}
+
+.button-rectangle {
+    background-position: 610px -7px;
+}
+
+.button-circle {
+    background-position: 975px 669px;
+}
+
+.button-moove {
+    background-position: 603px 790px;
+}
+
+.button-shape{
+    background-position: 295px 540px;;
+}
+
+.button-lightening {
+    background-position: 670px 795px;
+}
+
+.button-dithering {
+    background-position: 424px 800px; 
+}
+
+.size {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 25px;
+    width: 96px;
+
+    border: #2d2d2d 2px solid;
+}
+
+.size div {
+    width: 100%;
+    height: 100%;
+}
+
+div[data-size="16px"] {
+    width: 90%;
+    height: 90%;
+    margin: auto auto;
+
+    background: whitesmoke;
+}
+
+div[data-size="1px"] {
+    width: 50%;
+    height: 50%;
+    margin: 25%;
+
+    background: whitesmoke;
+}
+
+div[data-size="4px"] {
+    width: 65%;
+    height: 65%;
+    margin: 17%;
+
+    background: whitesmoke;
+}
+
+div[data-size="8px"] {
+    width: 75%;
+    height: 75%;
+    margin: 12%;
+
+    background: whitesmoke;
+}
+
+.size div:hover,
+.size div:active {
+    border: yellow 1px solid;
+}
+
+.picker-box {
+    width: 100px;
+    height: 100px;
+    
+    background: black;
+    border: gray 2px solid;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Piskel-clone </title>
+            <link rel="stylesheet" href="./index.css">
+            <link rel="stylesheet" href="../preview/preview.css">
+            <link rel="stylesheet" href="../../components/frames-list/frame.css">
+            <link rel="stylesheet" href="../../components/modal-dialog/tools.css">
+        </head>
+        <body>
+            <div class="navigation">
+                <div class="navigation__logo"><img src="https://www.piskelapp.com/static/resources/logo_transparent_small_compact.png" alt="piskel">
+                    <span>-clone</span>
+                </div>  
+            </div>
+            <div class="main">
+                <div class="main-tools"></div>
+                <div class="main-frames"></div>
+                <div class="main-canvas">
+                    <canvas class="canvas" width="512px" height="512px">Canvas</canvas>
+                    <form class="form-size">  
+                        <span><input type="radio" class="size-canvas" name="size-canvas" value="32" checked>32х32</span>
+                        <span><input type="radio" class="size-canvas" name="size-canvas" value="64" >64х64</span>
+                        <span><input type="radio" class="size-canvas" name="size-canvas" value="128">128х128</span>
+                        
+                    </form>
+                </div>
+                <div class="main-preview"> 
+                </div>
+                <div class="main-menu-vertical"></div>
+            
+            <script type="text/javascript" src="../../../dist/main.js"></script>
+            
+            <!--<script type="text/javascript" src="../../components/modal-dialog/tools.js"></script>-->
+        </body>
+    </html>

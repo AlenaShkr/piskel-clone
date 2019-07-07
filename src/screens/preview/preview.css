@@ -1,0 +1,42 @@
+.preview {
+    width: 30vh;
+    height: 35vh;
+
+    background: #1d1d1d;
+}
+
+.preview-animation {
+    height: 85%;
+
+    background-image: url('../canvas/images/canvas-background-lowcontrast-dark.png');
+    background-repeat: repeat; 
+}
+
+.fps-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+
+    background: #2d2d2d;
+}
+
+.fps::-webkit-slider-runnable-track {
+    cursor: pointer;
+   }
+
+
+.value-fps {
+    display: inline;
+    color: gray;
+}
+
+.preview-animation:fullscreen {
+    height: 80vh;
+    background-color: white;
+}
+
+.fps {
+    width: 75%;
+}
