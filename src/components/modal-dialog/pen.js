@@ -1,7 +1,5 @@
 import { fill } from './fill';
-
-const canvas = window.document.querySelector('.canvas');
-const ctx = canvas.getContext('2d');
+import { ctx } from './global';
 
 let isDraw = false;
 

@@ -23,7 +23,7 @@ function saveStateCanvas() {
   for (let j = 0; j < count; j += 1) {
     const tempArray = [];
     for (let i = 0; i < count; i += 1) {
-      const img = ctx.getImageData(i * sizePixel, j * sizePixel, sizePixel, sizePixel);
+      const img = ctx.getImageData(i * sizePixel, j * sizePixel, 1, 1);
       const dataColor = img.data;
 
       const rgba = `rgba(${dataColor[0]},${dataColor[1]},${dataColor[2]},${dataColor[3]})`;
@@ -61,7 +61,7 @@ function redrawNumber(number) {
   }
 }
 
-function handlerBtnDelete(e) {
+function handleBtnDelete(e) {
   const removedFrame = e.target.parentNode.parentNode;
   const position = removedFrame.querySelector('.number-frame').textContent - 1;
   stateFrame.splice(position, 1);
@@ -71,7 +71,7 @@ function handlerBtnDelete(e) {
   redrawNumber(countFrame);
 }
 
-function handlerRedrawFrame(e) {
+function handleRedrawFrame(e) {
   const numberFrame = e.target.parentNode.querySelector('.number-frame');
   const position = numberFrame.textContent - 1;
   stateFrame.splice(position + 1, 1, saveStateCanvas());
@@ -87,19 +87,19 @@ function handlerRedrawFrame(e) {
   redrawFrame(position);
 }
 
-function handlerBtnDuplicate(e) {
+function handleBtnDuplicate(e) {
   const copyingFrame = e.target.parentNode.parentNode;
   const position = copyingFrame.querySelector('.number-frame').textContent - 1;
   stateFrame.splice(position + 1, 0, stateFrame[position]);
   const copiedFrame = copyingFrame.cloneNode(true);
 
   const btnDeleteFrame = copiedFrame.querySelector('.delete-frame');
-  btnDeleteFrame.addEventListener('click', handlerBtnDelete);
+  btnDeleteFrame.addEventListener('click', handleBtnDelete);
 
   const btnDuplicateFrame = copiedFrame.querySelector('.duplicate-frame');
-  btnDuplicateFrame.addEventListener('click', handlerBtnDuplicate);
+  btnDuplicateFrame.addEventListener('click', handleBtnDuplicate);
   const frames = copiedFrame.querySelector('.preview-frame');
-  frames.addEventListener('click', handlerRedrawFrame);
+  frames.addEventListener('click', handleRedrawFrame);
 
   const framePanel = copyingFrame.parentNode;
   framePanel.insertBefore(copiedFrame, copyingFrame.nextSibling);
@@ -125,15 +125,15 @@ function handlerAddFrame(newFrame) {
   redrawNumber(countFrame);
 
   const previewFr = addFrame.querySelector('.preview-frame');
-  previewFr.addEventListener('click', handlerRedrawFrame);
+  previewFr.addEventListener('click', handleRedrawFrame);
 
   const btnDeleteFrame = document.querySelector('.delete-frame');
-  btnDeleteFrame.addEventListener('click', handlerBtnDelete);
+  btnDeleteFrame.addEventListener('click', handleBtnDelete);
 
   const btnDuplicateFrame = document.querySelector('.duplicate-frame');
-  btnDuplicateFrame.addEventListener('click', handlerBtnDuplicate);
+  btnDuplicateFrame.addEventListener('click', handleBtnDuplicate);
   const frames = document.querySelector('.preview-frame');
-  frames.addEventListener('click', handlerRedrawFrame);
+  frames.addEventListener('click', handleRedrawFrame);
 }
 
 
