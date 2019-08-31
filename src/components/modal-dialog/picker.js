@@ -1,16 +1,24 @@
+import { rgbToHex } from './toHexUtilit';
+
 const canvas = window.document.querySelector('.canvas');
 const ctx = canvas.getContext('2d');
 
-export default function pick() {
-  const x = window.event.layerX;
-  const y = window.event.layerY;
-
-  const pixel = ctx.getImageData(x, y, 1, 1);
+function defineColor(coordX, coordY) {
+  const pixel = ctx.getImageData(coordX, coordY, 1, 1);
   const dataColor = pixel.data;
 
-  const rgba = `rgba(${dataColor[0]},${dataColor[1]},${dataColor[2]},${dataColor[3]})`;
-
-  const colorBox = window.document.querySelector('.picker-box');
-  colorBox.style.backgroundColor = rgba;
-  return rgba;
+  return dataColor;
 }
+
+function pick() {
+  const x = window.event.layerX;
+  const y = window.event.layerY;
+  const colour = defineColor(x, y);
+  const r = colour[0];
+  const g = colour[1];
+  const b = colour[2];
+
+  return rgbToHex(r, g, b);
+}
+
+export { pick, defineColor };

@@ -12,7 +12,7 @@ export default function renderPreview() {
 
   window.document.querySelector('.fps').addEventListener('input', () => {
     const valueFps = window.document.querySelector('.fps').value;
-    window.console.log(valueFps);
+
     const fps = window.document.querySelector('.value-fps');
     fps.innerHTML = `${valueFps} FPS`;
   });

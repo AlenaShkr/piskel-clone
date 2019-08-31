@@ -8,18 +8,23 @@ export default function renderTools() {
     </div>
     <div class="buttons">
     <div class="button-pen"></div>
-    <div class="button-mirrorpen"></div>
-    <div class="button-bucket"></div>
     <div class="button-paintall"></div>
     <div class="button-eraser"></div>
     <div class="button-stroke"></div>
-    <div class="button-rectangle"></div>
-    <div class="button-circle"></div>
-    <div class="button-moove"></div>
-    <div class="button-shape"></div>
     <div class="button-lightening"></div>
     <div class="button-dithering"></div>
     <div class="button-picker"></div>
+    </div>
+    <div class="picker">
+    <div>
+    <p class="picker-label">Primary color</p>
+    <input type="color" class="picker-input" value="#000000">
+    </div>
+    <div>
+    <p class="picker-label">Secondary color</p>
+    <input type="color" class="picker-input"
+           value="#3d3d3d">
+    </div>
     </div>
     <div class="picker-box"></div>`;
 

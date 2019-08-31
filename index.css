@@ -1,0 +1,197 @@
+body {
+  margin: 0px;
+
+  background: #1D1D1D;
+  color: whitesmoke;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  
+  background: #2D2D2D;
+}
+
+.navigation span {
+  font-style: italic;
+  font-size: 22px;
+  color: aqua;
+}
+
+.navigation__logo img{
+  width: 100px;
+  height: 20px;
+  margin: 5px 0px 3px 10px;
+}
+
+.nav-sprite,
+.nav-signout {
+  margin-right: 10%;
+
+  background: aqua;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.nav-signout {
+  display: none;
+  
+  background: blue;
+}
+
+.nav-sprite a,
+.nav-signout a {
+  text-decoration-line: none;
+  font-weight: bold;
+
+  color: #2D2D2D;
+
+  -moz-text-decoration-line: none;
+}
+
+.nav-signout a {
+  color: whitesmoke;
+}
+
+.nav-sprite:hover {
+  background: whitesmoke;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.g-signin2 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.nav-message-welcome {
+  margin: auto 0px;
+
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 26px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.description,
+.screenshort,
+.examples {
+  display: flex;
+  justify-content: center;
+}
+
+.screenshort {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenshort p {
+  width: 65%;
+}
+
+.examples {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  font-size: 28px;
+}
+
+.examples img {
+  width: 150px;
+  margin-right: 20px;
+
+  border: 1px gray solid;
+  box-shadow: 0 0 20px gray;
+}
+
+.description {
+  width: 80%;
+}
+
+.description p {
+  width: 80%;
+
+  font-size: 32px;
+}
+
+.title {
+  color: aqua;
+}
+
+.screenshort img {
+  width: 65%;
+}
+
+.functionality ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.functionality li {
+  width: 18%;
+  min-width: 250px;
+
+  font-size: 22px;
+}
+
+li {
+  margin-left: 25px;
+
+  list-style-type: none;
+}
+
+.author {
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+
+.author p {
+  margin: 0px;
+}
+
+.author a,
+.screenshort a {
+  color: aqua;
+}
+
+footer {
+  font-size: 20px;
+
+  background: #2D2D2D;
+}
+
+.copyright {
+  margin-left: 10%;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}

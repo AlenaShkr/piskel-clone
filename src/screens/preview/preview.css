@@ -32,9 +32,8 @@
     color: gray;
 }
 
-.preview-animation:fullscreen {
-    height: 80vh;
-    background-color: white;
+.preview:fullscreen {
+    background-color:#2d2d2d;
 }
 
 .fps {

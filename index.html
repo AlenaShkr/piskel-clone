@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="google-signin-scope" content="profile email">
+            <meta name="google-signin-client_id" content="454710425605-4g3khtppmeg3nu9ljh1bau0ai60emtfp.apps.googleusercontent.com">
+	        <script src="https://apis.google.com/js/platform.js" async defer></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Piskel-clone</title>
+            <link rel="stylesheet" href="./index.css">
+        </head>
+        <body>
+        <header>
+            <div class="navigation">
+                <div class="navigation__logo"><h1><img src="https://www.piskelapp.com/static/resources/logo_transparent_small_compact.png" alt="piskel">
+                <span>-clone</span></h1>
+                </div>  
+                <div class="nav-btn">
+                    <button class="nav-sprite"><a href="./src/screens/canvas/index.html" alt="create sprite">Create sprite</a></button>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                    <div class="nav-message-welcome"></div>
+                    <button class="nav-signout"><a href="#" onclick="signOut();">Sign out</a></button>
+                </div>
+                <script>
+                const welcomeMessage = document.querySelector('.nav-message-welcome');
+                const btnAuth = document.querySelector('.g-signin2');
+                const btnSignout = document.querySelector('.nav-signout');
+
+                function onSignIn(googleUser) {
+                    const profile = googleUser.getBasicProfile();
+                    welcomeMessage.textContent = `Welcome ${profile.getGivenName()}!`;
+                    
+                    btnSignout.style.display ='inline';
+                    btnAuth.style.display = 'none';
+                    const id_token = googleUser.getAuthResponse().id_token;
+                }
+               
+                function signOut() {
+                    const auth2 = gapi.auth2.getAuthInstance();
+                    auth2.signOut().then(function () {
+                    
+                    welcomeMessage.textContent = ``;
+                    btnSignout.style.display='none';
+                    btnAuth.style.display='inline';
+                    });
+                }
+                </script>
+            </div>
+        </header>
+        <main>
+            <div class="description">
+            <p><span class="title">Piskel-clone</span> is the project of free online editor for animated sprites & pixel art</p></div>
+            <div class="examples">
+                <img src="src/image/night.gif">
+                <img src="src/image/panda.gif">
+                <img src="src/image/color.gif">
+             </div>
+            <div class="screenshort">
+                <p>Author strive create application similar 
+                    <a href="https://www.piskelapp.com/">Piskel</a>:
+                </p>
+                <img src='https://www.piskelapp.com/static/resources/home/screenshot_with_browser_ui_generic_800.png'>
+            </div>
+            <div class="functionality">
+                <ul>
+                    <li><p class="title">Canvas sizes</p> you can choose size canvas : 32x32 units / 64x64 units / 128x128 units</li>
+                    <li><p class="title">Tools: pen, all paint bucket, eraser, color picker </p> you can drawing by pen, paint all pixels of the same color, clean picture, define element colour and set it </li>
+                    <li><p class="title">Color select</p> you can choose painting color (primary and secondary)</li>
+                    <li><p class="title">Preview</p> In small animation preview window in the top right corner can look at animation and in full screen mode</li>
+                    <li><p class="title">Frames</p> Ability to add/delete a frame,ability duplicate a frame</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="author">
+                <p>Prodused by</p>
+                    <div>
+                        <p>Alena Shkradziuk</p>
+                        <a href="https://github.com/AlenaShkr">Github</a>
+                    </div>
+            </div>
+            <p class="copyright">&#169 RSSchool 2019</p>
+        </footer>
+        </body>
+    </html>
